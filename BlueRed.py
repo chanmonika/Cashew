@@ -12,12 +12,12 @@ while True :
         break
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     #Red range 1: pure red near Hue 0
-    lower_red1 = np.array([0, 50, 50])
-    upper_red1 = np.array([10, 255, 255])
+    lower_red1 = np.array([0, 185, 80])
+    upper_red1 = np.array([4, 255, 255])
 
     # Red range 2: pure red near Hue 179
-    lower_red2 = np.array([170, 50, 50])
-    upper_red2 = np.array([180, 255, 255])
+    lower_red2 = np.array([175, 185, 80])
+    upper_red2 = np.array([179, 255, 255])
 
     mask1 = cv2.inRange(hsv, lower_red1, upper_red1)
     mask2 = cv2.inRange(hsv, lower_red2, upper_red2)
